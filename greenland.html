@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>trip</title>  
+        <style type="text/css">
+
+          body {
+              font-family: Century Gothic;
+              margin:0
+          }           
+          #tex1{
+            
+            text-align: center;
+          }
+          #tex2{
+            clear:both;
+            text-align: center;
+          }
+          #tex3{
+            
+            text-align: center;
+          }
+          #tex{
+            
+            text-align: center;
+          }
+          #leftside{
+            float:left;
+            height:550px;
+            width:50%; 
+           
+          }
+          #leftside1{
+            float:left;
+            height:350px;
+            width:50%; 
+           
+          }
+          #rightside{
+            float:right;
+            height:550px;
+            width:50%; 
+            align-items: center;
+            
+          }
+          #rightside1{
+            float:right;
+            height:350px;
+            width:50%; 
+            align-items: center;
+            
+          }
+          {box-sizing:border-box}
+            
+          .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+          }
+          .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+          }
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
+          .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+          .dot {
+            cursor:pointer;
+            height: 13px;
+            width: 13px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+          }
+          .active, .dot:hover {
+            background-color: #717171;
+          }
+          ul.tab {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+           : fixed
+          }
+          ul.tab li
+          {
+            float: right;
+          }
+          ul.tab li a 
+          {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 17px;
+          }
+          ul.tab li a:hover 
+          {
+            background-color: #ddd;
+          }
+          ul.tab li a:focus, .active 
+          {
+            background-color: #ccc;
+          }
+          .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            -webkit-animation: fadeEffect 1s;
+            animation: fadeEffect 1s;
+          }
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+      <ul class="tab">
+        <a>Green Land</a>
+        <li><a href="#3" class="tablinks" onclick="openCity(event, '行程')">必去行程</a></li>
+        <li><a href="#2" class="tablinks" onclick="openCity(event, '地圖')">地圖</a></li>
+        <li><a href="#1" class="tablinks" onclick="openCity(event, '交通')">交通</a></li>  
+      </ul>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="1.jpg" style="width:1000px;filter: blur(3px)">
+        </div>
+        <div class="mySlides fade">
+          <img src="4.jpg" style="width:1000px;filter: blur(3px)">
+        </div>
+        <div class="mySlides fade">
+          <img src="5.jpg" style="width:1000px;filter: blur(3px)">
+        </div>
+        <div class="mySlides fade">
+          <img src="6.jpg" style="width:1000px;filter: blur(3px)">
+        </div>
+        <div class="mySlides fade">
+          <img src="3.jpg" style="width:1000px;filter: blur(3px)">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+        <span class="dot" onclick="currentSlide(5)"></span> 
+      </div>
+      <div id="tex">
+        <h1>旅遊新選擇</h1>
+        <h2>不能出國，不如來綠島走走</h2>
+      </div>
+      <div >
+        <img src="234.jpg" width="1260" >
+      </div>
+      <div id="tex1">
+        <div id="1">
+          <h2>交通</h2>
+          <h3>開始一場旅遊，選擇一個好的交通方式會是你的好幫手。</h3>
+        </div>
+      </div>
+      <div id="leftside">
+        <img src="air.jpg"  width="500" height="510"style="padding-left: 150px;">
+      </div>
+      <div id="rightside">
+        <img src="sh.jpg"width="500" height="510" >
+      </div>
+      <div id="tex2">
+        <div id="2">
+          <h2>地圖</h2>
+          <h3>旅遊沒有地圖，可能永遠都在繞圈圈。</h3>
+          <h4>在地圖中找找自己想去的地方吧!</h4>
+
+        </div>
+      </div>
+
+      <div id="tex3">
+        <a href="https://tour.taitung.gov.tw/zh-tw/attraction/details/364">
+          <img src="綠島.jpg" width="771" usemap="#綠島"style="width: 700px"></a>
+          <map name="綠島">
+          <area shape="poly" coords="123,45,129,63,132,82,134,101,134,120,133,131,119,127,101,124,89,146,83,129,81,118,98,116,98,95,96,61,100,37,102,18,110,8,122,3,128,12,138,7,158,16,170,19,183,32,183,44,170,52,139,51" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/377">
+          <area shape="poly" coords="188,57,188,72,204,73,229,66,254,55,253,41,233,39,206,41,194,48" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/478">
+          <area shape="poly" coords="470,81" href="#">
+          <area shape="poly" coords="465,66" href="#">
+          <area shape="poly" coords="464,64,479,54,488,57,498,55,508,55,515,57,517,63,519,69,517,75,523,67,526,73,535,83,542,89,556,99,566,117,576,124,573,145,554,151,532,153,532,162,522,155,510,153,504,153,495,139,479,137,466,131,455,131,428,129,438,105,445,88,449,85,466,79" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/364">
+          <area shape="poly" coords="276,75,287,61,304,53,334,37,357,25,374,32,391,37,411,37,445,43,428,61,411,85" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/378">
+          <area shape="rect" coords="266,24,306,49" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/371">
+          <area shape="rect" coords="26,165,95,189" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/367">
+          <area shape="poly" coords="398,248,412,246,420,233,428,215,446,221,452,239,453,251,473,263,478,271,487,258,500,253,512,251,514,245,510,229,519,218,530,227,532,245,540,255,553,253,564,257,579,257,594,234,605,231,624,242,637,242,646,241,647,278,616,279,544,281,534,271,525,271,530,286,536,289,526,296,526,309,510,317,488,317,456,317,428,318,416,313,414,299,412,286,410,282,400,282,388,277" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/1293">
+          <area shape="rect" coords="400,131,461,168" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/380">
+          <area shape="poly" coords="187,237,206,237,234,239,296,237,312,237,320,247,337,255,358,258,370,264,370,285,370,304,364,313,356,329,352,331,356,344,356,360,347,364,329,364,312,368,306,355,300,356,289,352,275,350,269,356,256,350,251,347,241,339,231,335,224,339,216,334,213,341,209,347,196,338,204,326,203,314,194,304,181,300,170,299,174,271,174,250" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/370">
+          <area shape="poly" coords="112,167" href="#">
+          <area shape="poly" coords="104,170,108,187,108,211,107,224,119,225,128,223,128,185,162,185,178,186,180,219,195,229,199,215,230,217,240,207,243,189,236,175,194,170,176,167,144,159,147,149,157,156,166,150,170,138,157,123,142,122,136,127,127,135,118,132,107,132,99,141,88,152,82,154" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/376">
+          <area shape="poly" coords="248,143,249,157,258,165,287,173,298,195,298,218,335,221,374,219,378,203,374,159,383,146,373,131,342,115,306,111,284,131,270,130" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/383">
+          <area shape="poly" coords="490,165,504,165,516,166,519,177,518,183,496,181,480,186,478,203,459,203,434,209,403,200,397,180,413,170" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/368">
+          <area shape="poly" coords="225,387,242,387,264,387,280,387,282,397,285,409,294,429,292,444,277,451,254,444,234,443,212,425,200,402,212,385" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/362">
+          <area shape="poly" coords="392,334,405,317,420,324,422,332,435,336,473,342,484,349,504,365,493,379,484,388,490,399,488,415,491,426,482,430,465,434,456,410,442,412,427,417,412,425,406,444,384,456,353,456,354,436,366,384,384,345" href="https://tour.taitung.gov.tw/zh-tw/attraction/details/372">
+        </map>
+      </div>
+      </div>
+      <div id="tex">
+        <div id="3">
+          <h2>必去行程</h2>
+          <h3>旅遊可以沒有重點，但若需要重點，重點在這了!</h3>
+        </div>
+      </div>
+      <div id="leftside1">
+        <img src="image12.png" width="500"style="padding-left: 150px;">
+      </div>
+       
+      <div id="rightside1" > 
+        <img src="image2.png" width="500">
+      </div>
+      <div id="leftside1">
+        <img src="pasted image 0.png" width="500"style="padding-left: 150px;">
+      </div>
+      <div id="rightside1">
+        <img src="image5.png" width="500">
+      </div>
+      <div id="leftside1">
+        <img src="image7.png" width="500"style="padding-left: 150px;">
+      </div>
+      <div id="rightside1">        
+        <img src="image9.png" width="500">
+      </div>
+
+        
+    </body>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) 
+      {
+        showSlides(slideIndex += n);
+      }
+      function currentSlide(n) 
+      {
+        showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length} ;
+        for (i = 0; i < slides.length; i++) 
+        {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++)
+        {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tabcontent.length; i++) 
+        {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+
+
+
+
+</html>    
+
